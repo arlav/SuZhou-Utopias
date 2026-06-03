@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tectonic Discretiser</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Cormorant:ital,wght@0,300;1,300&display=swap');
+:root{
+  --bg:#09090a;--sf:#0d0d0f;--bd:#1c1c22;--bd2:#26262e;
+  --tx:#bfbcb4;--mu:#4e4e58;--ac:#c8a046;
+  --prog:#c8a046;--circ:#56a07a;--serv:#8a6db0;
+  --slab:#ddd5c2;--col:#eeece6;--beam:#aaa090;--wall:#887860;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--tx);font-family:"DM Mono",monospace;font-size:11px;height:100vh;overflow:hidden;display:flex;flex-direction:column;}
+
+/* HEADER */
+header{display:flex;align-items:center;padding:6px 12px;gap:10px;border-bottom:1px solid var(--bd);background:var(--sf);flex-shrink:0;flex-wrap:wrap;}
+.wm{font-family:"Cormorant",serif;font-size:17px;font-weight:300;font-style:italic;letter-spacing:.1em;color:var(--ac);}
+.tag{font-size:7px;letter-spacing:.18em;color:var(--mu);border:1px solid var(--bd2);padding:2px 5px;text-transform:uppercase;}
+.hs{font-size:8px;color:var(--mu);letter-spacing:.08em;white-space:nowrap;}.hs b{color:var(--ac);}
+.hr{margin-left:auto;display:flex;gap:5px;align-items:center;}
+.gi{display:flex;gap:3px;align-items:center;}
+.gi label{font-size:7px;color:var(--mu);}
+.gi input[type=number]{width:38px;background:var(--bg);border:1px solid var(--bd2);color:var(--tx);font-family:"DM Mono",monospace;font-size:8px;padding:2px 4px;text-align:center;-moz-appearance:textfield;}
+.gi input.wide{width:62px;}
+.gi input::-webkit-inner-spin-button{-webkit-appearance:none;}
+.gi span{color:var(--bd2);font-size:10px;}
+
+/* BUTTONS */
+.btn{font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--bd2);background:none;color:var(--tx);cursor:pointer;transition:all .1s;}
+.btn:hover{border-color:var(--ac);color:var(--ac);}.btn.on{background:var(--ac);color:var(--bg);border-color:var(--ac);}
+.btn.go{background:#182818;border-color:#2a5030;color:#56a07a;}.btn.go.on{background:#2a5030;color:#90d0a8;}
+.btn.rb{border-color:#503a10;color:#c07828;}.btn.rb:hover{background:#302010;}
+.btn.sm{padding:2px 6px;font-size:7px;}.btn.xs{padding:2px 4px;font-size:6px;}
+
+/* MAIN */
+.main{display:grid;grid-template-columns:182px 1fr 212px;flex:1;overflow:hidden;}
+.lp,.rp{display:flex;flex-direction:column;overflow-y:auto;background:var(--sf);}
+.lp{border-right:1px solid var(--bd);}.rp{border-left:1px solid var(--bd);}
+.ps{padding:8px 10px;border-bottom:1px solid var(--bd);flex-shrink:0;}
+.pt{font-size:6px;letter-spacing:.22em;color:var(--mu);text-transform:uppercase;margin-bottom:6px;}
+
+/* RANGES */
+.rrow{margin-bottom:5px;}
+.rhd{display:flex;justify-content:space-between;font-size:7px;color:var(--mu);margin-bottom:2px;}.rhd b{color:var(--tx);}
+input[type=range]{-webkit-appearance:none;width:100%;height:12px;background:transparent;cursor:pointer;}
+input[type=range]::-webkit-slider-runnable-track{height:1px;background:var(--bd2);}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:7px;height:7px;background:var(--ac);border-radius:0;margin-top:-3px;}
+input[type=range].rc::-webkit-slider-thumb{background:var(--circ);}
+input[type=range].rs::-webkit-slider-thumb{background:var(--serv);}
+input[type=range].rsl::-webkit-slider-thumb{background:var(--slab);}
+
+/* STRUCTURE LEGEND */
+.sleg{display:flex;flex-direction:column;gap:3px;margin-top:6px;}
+.sr{display:flex;align-items:center;gap:5px;}
+.slbl{font-size:7px;color:var(--mu);flex:1;}.swhere{font-size:6px;color:var(--mu);opacity:.5;}
+
+/* CANVAS */
+.czone{position:relative;overflow:hidden;background:var(--bg);display:flex;flex-direction:column;}
+.ctb{display:flex;align-items:center;gap:7px;padding:4px 9px;border-bottom:1px solid var(--bd);background:var(--sf);flex-shrink:0;flex-wrap:wrap;}
+.ctl{font-size:7px;color:var(--mu);letter-spacing:.1em;}
+#mc{display:block;flex:1;width:100%;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab;}
+.cinfo{position:absolute;bottom:7px;left:9px;font-size:7px;color:var(--mu);letter-spacing:.08em;pointer-events:none;}
+.cinfo b{color:var(--ac);}
+.cinfo2{position:absolute;bottom:7px;right:9px;font-size:7px;color:var(--mu);letter-spacing:.08em;pointer-events:none;}
+
+/* RIGHT PANEL */
+.cmi{padding:5px 9px;border-bottom:1px solid var(--bd);}
+.cmh{display:flex;align-items:center;gap:4px;margin-bottom:3px;}
+.cmdt{width:5px;height:5px;}.cmnm{font-size:7px;flex:1;letter-spacing:.06em;}.cmpct{font-size:7px;font-weight:500;}
+.cmbar{height:1px;background:var(--bd2);}.cmfill{height:100%;transition:width .15s;}
+
+.pri{display:flex;align-items:center;gap:4px;padding:3px 9px;border-bottom:1px solid var(--bd);}
+.prnm{font-size:7px;color:var(--mu);flex:1;letter-spacing:.05em;}
+.prtr{width:40px;height:1px;background:var(--bd2);position:relative;}
+.prfill{position:absolute;top:0;left:0;bottom:0;transition:width .12s;}
+.prsc{font-size:6px;color:var(--mu);width:24px;text-align:right;letter-spacing:1px;}
+.prv{font-size:7px;width:26px;text-align:right;}
+
+.ss{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px 7px;}
+.ssi{display:flex;flex-direction:column;gap:1px;}
+.ssil{font-size:6px;color:var(--mu);letter-spacing:.09em;text-transform:uppercase;}
+.ssiv{font-size:10px;font-weight:500;}
+
+/* TOPO PANEL */
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:2px 7px;margin-bottom:5px;}
+.ts{display:flex;flex-direction:column;gap:1px;}
+.tsl{font-size:6px;color:var(--mu);letter-spacing:.09em;text-transform:uppercase;}
+.tsv{font-size:9px;color:var(--ac);font-weight:500;}
+.eb{width:100%;font-family:"DM Mono",monospace;font-size:7px;letter-spacing:.1em;text-transform:uppercase;padding:4px;border:1px solid #264530;background:none;color:#56a07a;cursor:pointer;transition:all .1s;margin-bottom:3px;}
+.eb:hover{background:#141e12;}
+.apre{font-size:7px;color:var(--mu);line-height:1.8;max-height:64px;overflow-y:auto;letter-spacing:.04em;}
+
+/* LOG */
+.logbox{font-size:7px;color:var(--mu);line-height:1.9;padding:5px 9px;overflow-y:auto;max-height:90px;}
+.logbox .lg{color:var(--ac);}.logbox .lok{color:#56a07a;}.logbox .lw{color:#c07030;}
+
+/* STATUS */
+.sbar{display:flex;gap:10px;padding:4px 12px;border-top:1px solid var(--bd);background:var(--sf);flex-shrink:0;flex-wrap:wrap;}
+.sbi{font-size:7px;color:var(--mu);letter-spacing:.08em;white-space:nowrap;}.sbi b{color:var(--tx);}
+
+.tip{position:fixed;background:var(--sf);border:1px solid var(--bd2);padding:3px 6px;font-size:7px;pointer-events:none;opacity:0;transition:opacity .1s;z-index:100;max-width:260px;}
+select{background:var(--bg);border:1px solid var(--bd2);color:var(--tx);font-family:"DM Mono",monospace;font-size:8px;padding:2px 4px;}
+::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-thumb{background:var(--bd2);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wm">Tectonic Discretiser</div>
+  <div class="tag">Split Grammar &middot; Discrete</div>
+  <div class="gi">
+    <label>W</label><input type="number" id="inW" value="60" min="20" max="140">
+    <span>&times;</span>
+    <label>D</label><input type="number" id="inD" value="60" min="20" max="140">
+    <label style="margin-left:6px">seed</label><input type="number" class="wide" id="inSeed" value="424242">
+    <button class="btn rb" onclick="rebuild()">Rebuild</button>
+  </div>
+  <div class="hs">GEN <b id="hG">000</b></div>
+  <div class="hs">CELLS <b id="hCell">0</b></div>
+  <div class="hs">&rho; <b id="hCov">0%</b></div>
+  <div class="hs">FINS <b id="hFin">0</b></div>
+  <div class="hs">REV <b id="hRev">0</b></div>
+  <div class="hs">REG <b id="hReg">0</b></div>
+  <div class="hs">GRAPH <b id="hN">0</b>n&nbsp;<b id="hE">0</b>e</div>
+  <div class="hr">
+    <button class="btn" onclick="doRegen()">Regenerate</button>
+    <button class="btn go" onclick="doReroll()">&#10227; Re-roll</button>
+  </div>
+</header>
+
+<div class="main">
+
+<!-- LEFT PANEL -->
+<div class="lp">
+  <div class="ps">
+    <div class="pt">Subdivision Grammar &mdash; split rules</div>
+    <div class="rrow"><div class="rhd">Max depth <b id="vMAXD">7</b></div><input type="range" id="rMAXD" min="3" max="10" value="7" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Min forced depth <b id="vMIND">3</b></div><input type="range" id="rMIND" min="1" max="5" value="3" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Min cell (m) <b id="vMINC">2.4</b></div><input type="range" class="rsl" id="rMINC" min="8" max="40" value="24" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Split prob. <b id="vSPLITP">0.94</b></div><input type="range" id="rSPLITP" min="70" max="99" value="94" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Depth falloff <b id="vFALL">0.09</b></div><input type="range" id="rFALL" min="0" max="25" value="9" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Rhythm (irregular) <b id="vRHY">0.55</b></div><input type="range" class="rs" id="rRHY" min="0" max="100" value="55" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Comb prob. (slats) <b id="vCOMBP">0.30</b></div><input type="range" class="rc" id="rCOMBP" min="0" max="70" value="30" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Comb strips max <b id="vCOMBN">5</b></div><input type="range" class="rc" id="rCOMBN" min="2" max="9" value="5" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Open frame ratio <b id="vOPENR">0.28</b></div><input type="range" id="rOPENR" min="0" max="60" value="28" oninput="syncGrammar()"></div>
+    <div class="rrow"><div class="rhd">Longer-axis bias <b id="vAX">0.74</b></div><input type="range" id="rAX" min="50" max="95" value="74" oninput="syncGrammar()"></div>
+  </div>
+
+  <div class="ps">
+    <div class="pt">Registers &amp; Relief &mdash; the Z stack</div>
+    <div class="rrow"><div class="rhd">Registers (strata) <b id="vREG">7</b></div><input type="range" class="rc" id="rREG" min="2" max="10" value="7" oninput="syncReg()"></div>
+    <div class="rrow"><div class="rhd">Z step (m) <b id="vZSTEP">3.2</b></div><input type="range" id="rZSTEP" min="10" max="60" value="32" oninput="syncReg()"></div>
+    <div class="rrow"><div class="rhd">Plate thickness (m) <b id="vTHICK">0.7</b></div><input type="range" class="rsl" id="rTHICK" min="3" max="20" value="7" oninput="syncReg()"></div>
+    <div class="rrow"><div class="rhd">Reveal threshold (m) <b id="vREVEAL">2.0</b></div><input type="range" id="rREVEAL" min="5" max="50" value="20" oninput="syncReg()"></div>
+    <div class="rrow"><div class="rhd">Stratifier (depth&rarr;noise) <b id="vSTRAT">0.55</b></div><input type="range" class="rs" id="rSTRAT" min="0" max="100" value="55" oninput="syncReg()"></div>
+  </div>
+
+  <div class="ps">
+    <div class="pt">Derived Tectonics</div>
+    <div class="sleg">
+      <div class="sr"><svg width="12" height="12"><rect x="1" y="3" width="10" height="6" fill="#ddd5c2"/></svg><div class="slbl">Plate</div><div class="swhere">leaf cell · Cell</div></div>
+      <div class="sr"><svg width="12" height="12"><rect x="4" y="1" width="4" height="10" fill="#16171b" stroke="#887860" stroke-width="0.6"/></svg><div class="slbl">Fin</div><div class="swhere">stepped boundary · Face</div></div>
+      <div class="sr"><svg width="12" height="12"><rect x="4" y="1" width="4" height="10" fill="#000"/></svg><div class="slbl">Reveal</div><div class="swhere">shadow-gap fin</div></div>
+      <div class="sr"><svg width="12" height="12"><line x1="1" y1="6" x2="11" y2="6" stroke="#c8a046" stroke-width="1"/></svg><div class="slbl">Stratum</div><div class="swhere">register datum</div></div>
+      <div style="font-size:6px;color:var(--mu);margin-top:4px;line-height:1.6">Structure is topological, not a cell type. Fins/reveals are DERIVED from leaf adjacency &times; register step. Exported as TopologicPy Face/Cell with Dictionary semantics.</div>
+    </div>
+  </div>
+
+  <div class="ps">
+    <div class="pt">View</div>
+    <div style="display:flex;gap:3px;margin-bottom:6px">
+      <button class="btn sm on" id="vA" onclick="setV('axo')">Axo</button>
+      <button class="btn sm" id="vP" onclick="setV('plan')">Plan</button>
+      <button class="btn sm" id="vS" onclick="setV('strata')">Strata</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px">
+      <span style="font-size:6px;color:var(--mu);width:34px">Azim &theta;</span>
+      <input type="range" id="rCam" min="0" max="360" value="32" style="flex:1" oninput="syncCam()">
+    </div>
+    <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px">
+      <span style="font-size:6px;color:var(--mu);width:34px">Elev &phi;</span>
+      <input type="range" id="rEl" min="4" max="89" value="58" style="flex:1" oninput="syncEl()">
+    </div>
+    <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px">
+      <span style="font-size:6px;color:var(--mu);width:34px">Cutaway</span>
+      <input type="range" id="rReg" min="0" max="6" value="6" style="flex:1" oninput="syncReveal()">
+      <span style="font-size:8px;color:var(--ac);width:18px" id="vReg">all</span>
+    </div>
+    <div style="display:flex;gap:6px;margin-bottom:6px">
+      <div style="flex:1"><div style="font-size:6px;color:var(--mu);margin-bottom:2px">Palette</div>
+        <select id="selPal" onchange="setPalette()" style="width:100%">
+          <option value="olschinsky">Olschinsky</option>
+          <option value="slate">Slate</option>
+          <option value="ember">Ember</option>
+          <option value="paperink">Paper-ink</option>
+        </select></div>
+      <div style="flex:1"><div style="font-size:6px;color:var(--mu);margin-bottom:2px">Ground</div>
+        <select id="selGnd" onchange="setGround()" style="width:100%">
+          <option value="graphite">Graphite</option>
+          <option value="paper">Paper</option>
+        </select></div>
+    </div>
+    <div style="display:flex;gap:3px;flex-wrap:wrap">
+      <button class="btn xs" onclick="togFins()">Fins <span id="fl">ON</span></button>
+      <button class="btn xs" onclick="togGraph()">Graph <span id="gl">OFF</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- CANVAS -->
+<div class="czone">
+  <div class="ctb">
+    <span class="ctl" id="glbl">PLOT 60&times;60 m</span>
+    <span style="color:var(--bd2)">|</span>
+    <span class="ctl">Drag to orbit &nbsp;&middot;&nbsp; scroll to zoom &nbsp;&middot;&nbsp; hover a cell in plan</span>
+    <span class="ctl" style="color:var(--ac);letter-spacing:.06em" id="camRead">az 32° · el 58° · 1.0×</span>
+    <span style="margin-left:auto;font-size:6px;color:var(--mu)">1/2/3 view &nbsp;&middot;&nbsp; R re-roll &nbsp;&middot;&nbsp; G regen &nbsp;&middot;&nbsp; F fins</span>
+  </div>
+  <canvas id="mc"></canvas>
+  <div class="cinfo"><span style="color:var(--ac)">DISCRETISE</span> &nbsp;|&nbsp; GEN <b id="cG">000</b> &nbsp;|&nbsp; <span id="cDim">60&times;60m</span></div>
+  <div class="cinfo2"><span id="cCells">0 cells</span> &middot; <span id="cFins">0 fins</span> &middot; <span id="cReg">0 reg</span></div>
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="rp">
+  <div class="ps" style="padding-bottom:2px"><div class="pt">Register Signals &mdash; area share</div></div>
+  <div id="sigP"></div>
+
+  <div class="ps" style="padding-bottom:4px;margin-top:2px">
+    <div class="pt">Tectonic Elements</div>
+    <div class="ss" id="elSt"></div>
+  </div>
+
+  <div class="ps" style="padding-bottom:2px;margin-top:2px"><div class="pt">Tectonic Parameters</div></div>
+  <div id="paramP"></div>
+
+  <div class="ps" style="margin-top:3px">
+    <div class="pt">TopologicPy Export</div>
+    <div class="tg" id="tg"></div>
+    <button class="eb" onclick="exportPy()">&darr; Export TopologicPy Script</button>
+    <button class="eb" onclick="exportJSON()">&darr; Export Raw JSON (debug)</button>
+    <div style="font-size:6px;color:var(--mu);margin-bottom:2px;letter-spacing:.08em">Cell&ndash;cell adjacency (register step):</div>
+    <div class="apre" id="ap"></div>
+  </div>
+
+  <div class="ps" style="padding-bottom:2px;margin-top:2px"><div class="pt">Event Log</div></div>
+  <div class="logbox" id="lg"></div>
+</div>
+
+</div><!-- /main -->
+
+<div class="sbar">
+  <div class="sbi">CELLS <b id="sbCell">0</b></div>
+  <div class="sbi">SOLID <b id="sbSol">0</b></div>
+  <div class="sbi">FRAME <b id="sbFr">0</b></div>
+  <div class="sbi">FINS <b id="sbFin">0</b></div>
+  <div class="sbi">REVEALS <b id="sbRev">0</b></div>
+  <div class="sbi">STRATA <b id="sbStr">0</b></div>
+  <div class="sbi">NODES <b id="sbN">0</b></div>
+  <div class="sbi">EDGES <b id="sbE">0</b></div>
+  <div class="sbi">COMP <b id="sbCp">0</b></div>
+  <div class="sbi">DEPTH <b id="sbDep">0</b></div>
+</div>
+<div class="tip" id="tip"></div>
+
+<!-- Script load order matters: engine → topology → render → export → app -->
+<script src="js/subdiv-engine.js"></script>
+<script src="js/topology.js"></script>
+<script src="js/render.js"></script>
+<script src="js/export.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

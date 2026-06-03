@@ -1,0 +1,7202 @@
+{
+  "meta": {
+    "tool": "tectonic-discretiser",
+    "generation": 2,
+    "plot_m": [
+      60,
+      60
+    ],
+    "registers": 7,
+    "z_step_m": 3.2,
+    "plate_thickness_m": 0.7,
+    "reveal_threshold_m": 2,
+    "params": {
+      "MIND": 3,
+      "MAXD": 7,
+      "MINC": 2.4,
+      "SPLITP": 0.94,
+      "FALLOFF": 0.09,
+      "RHYTHM": 0.55,
+      "COMBP": 0.3,
+      "COMBN": 5,
+      "OPENR": 0.28,
+      "STRAT": 0.55,
+      "AXBIAS": 0.74
+    },
+    "seed": 424242
+  },
+  "strata": [
+    {
+      "reg": 1,
+      "z": 3.2,
+      "area": 225,
+      "count": 1,
+      "dict": {
+        "type": "Stratum",
+        "register": "Plinth",
+        "register_id": 1,
+        "elevation_m": 3.2,
+        "plate_count": 1,
+        "coverage": 0.063
+      }
+    },
+    {
+      "reg": 2,
+      "z": 6.4,
+      "area": 1274.0976297000002,
+      "count": 8,
+      "dict": {
+        "type": "Stratum",
+        "register": "Course",
+        "register_id": 2,
+        "elevation_m": 6.4,
+        "plate_count": 8,
+        "coverage": 0.354
+      }
+    },
+    {
+      "reg": 3,
+      "z": 9.600000000000001,
+      "area": 712.7826452999999,
+      "count": 9,
+      "dict": {
+        "type": "Stratum",
+        "register": "Mid",
+        "register_id": 3,
+        "elevation_m": 9.6,
+        "plate_count": 9,
+        "coverage": 0.198
+      }
+    },
+    {
+      "reg": 4,
+      "z": 12.8,
+      "area": 389.4579,
+      "count": 8,
+      "dict": {
+        "type": "Stratum",
+        "register": "Cornice",
+        "register_id": 4,
+        "elevation_m": 12.8,
+        "plate_count": 8,
+        "coverage": 0.108
+      }
+    },
+    {
+      "reg": 5,
+      "z": 16,
+      "area": 854.782875,
+      "count": 12,
+      "dict": {
+        "type": "Stratum",
+        "register": "Attic",
+        "register_id": 5,
+        "elevation_m": 16,
+        "plate_count": 12,
+        "coverage": 0.237
+      }
+    },
+    {
+      "reg": 6,
+      "z": 19.200000000000003,
+      "area": 143.87895,
+      "count": 3,
+      "dict": {
+        "type": "Stratum",
+        "register": "Crown",
+        "register_id": 6,
+        "elevation_m": 19.2,
+        "plate_count": 3,
+        "coverage": 0.04
+      }
+    }
+  ],
+  "plates": [
+    {
+      "bbox_min": [
+        0,
+        0,
+        3.2
+      ],
+      "bbox_max": [
+        7.5,
+        30,
+        3.9000000000000004
+      ],
+      "centroid": [
+        3.75,
+        15,
+        3.5500000000000003
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Plinth",
+        "register_id": 1,
+        "z_level": 1,
+        "elevation_m": 3.2,
+        "realisation": "solid",
+        "area_m2": 225,
+        "subdiv_depth": 3,
+        "aspect_ratio": 4,
+        "cell_w": 7.5,
+        "cell_d": 30
+      },
+      "id": 4
+    },
+    {
+      "bbox_min": [
+        7.5,
+        0,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        30,
+        7.5,
+        10.3
+      ],
+      "centroid": [
+        18.75,
+        3.75,
+        9.950000000000001
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "frame",
+        "area_m2": 168.75,
+        "subdiv_depth": 4,
+        "aspect_ratio": 3,
+        "cell_w": 22.5,
+        "cell_d": 7.5
+      },
+      "id": 6
+    },
+    {
+      "bbox_min": [
+        7.5,
+        7.5,
+        6.4
+      ],
+      "bbox_max": [
+        30,
+        15,
+        7.1000000000000005
+      ],
+      "centroid": [
+        18.75,
+        11.25,
+        6.75
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Course",
+        "register_id": 2,
+        "z_level": 2,
+        "elevation_m": 6.4,
+        "realisation": "solid",
+        "area_m2": 168.75,
+        "subdiv_depth": 4,
+        "aspect_ratio": 3,
+        "cell_w": 22.5,
+        "cell_d": 7.5
+      },
+      "id": 7
+    },
+    {
+      "bbox_min": [
+        7.5,
+        15,
+        16
+      ],
+      "bbox_max": [
+        30,
+        22.5,
+        16.7
+      ],
+      "centroid": [
+        18.75,
+        18.75,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 168.75,
+        "subdiv_depth": 4,
+        "aspect_ratio": 3,
+        "cell_w": 22.5,
+        "cell_d": 7.5
+      },
+      "id": 8
+    },
+    {
+      "bbox_min": [
+        7.5,
+        22.5,
+        6.4
+      ],
+      "bbox_max": [
+        12,
+        30,
+        7.1000000000000005
+      ],
+      "centroid": [
+        9.75,
+        26.25,
+        6.75
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Course",
+        "register_id": 2,
+        "z_level": 2,
+        "elevation_m": 6.4,
+        "realisation": "solid",
+        "area_m2": 33.75,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.67,
+        "cell_w": 4.5,
+        "cell_d": 7.5
+      },
+      "id": 10
+    },
+    {
+      "bbox_min": [
+        12,
+        22.5,
+        12.8
+      ],
+      "bbox_max": [
+        16.5,
+        30,
+        13.5
+      ],
+      "centroid": [
+        14.25,
+        26.25,
+        13.15
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Cornice",
+        "register_id": 4,
+        "z_level": 4,
+        "elevation_m": 12.8,
+        "realisation": "frame",
+        "area_m2": 33.75,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.67,
+        "cell_w": 4.5,
+        "cell_d": 7.5
+      },
+      "id": 11
+    },
+    {
+      "bbox_min": [
+        16.5,
+        22.5,
+        16
+      ],
+      "bbox_max": [
+        21,
+        30,
+        16.7
+      ],
+      "centroid": [
+        18.75,
+        26.25,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 33.75,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.67,
+        "cell_w": 4.5,
+        "cell_d": 7.5
+      },
+      "id": 12
+    },
+    {
+      "bbox_min": [
+        21,
+        22.5,
+        16
+      ],
+      "bbox_max": [
+        25.5,
+        30,
+        16.7
+      ],
+      "centroid": [
+        23.25,
+        26.25,
+        16.35
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "frame",
+        "area_m2": 33.75,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.67,
+        "cell_w": 4.5,
+        "cell_d": 7.5
+      },
+      "id": 13
+    },
+    {
+      "bbox_min": [
+        25.5,
+        22.5,
+        6.4
+      ],
+      "bbox_max": [
+        30,
+        30,
+        7.1000000000000005
+      ],
+      "centroid": [
+        27.75,
+        26.25,
+        6.75
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Course",
+        "register_id": 2,
+        "z_level": 2,
+        "elevation_m": 6.4,
+        "realisation": "solid",
+        "area_m2": 33.75,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.67,
+        "cell_w": 4.5,
+        "cell_d": 7.5
+      },
+      "id": 14
+    },
+    {
+      "bbox_min": [
+        0,
+        30,
+        6.4
+      ],
+      "bbox_max": [
+        8.79,
+        35.3025,
+        7.1000000000000005
+      ],
+      "centroid": [
+        4.395,
+        32.65125,
+        6.75
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Course",
+        "register_id": 2,
+        "z_level": 2,
+        "elevation_m": 6.4,
+        "realisation": "solid",
+        "area_m2": 46.61,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.66,
+        "cell_w": 8.79,
+        "cell_d": 5.3
+      },
+      "id": 19
+    },
+    {
+      "bbox_min": [
+        0,
+        35.3025,
+        16
+      ],
+      "bbox_max": [
+        8.79,
+        51.21,
+        16.7
+      ],
+      "centroid": [
+        4.395,
+        43.25625,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 139.83,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.81,
+        "cell_w": 8.79,
+        "cell_d": 15.91
+      },
+      "id": 20
+    },
+    {
+      "bbox_min": [
+        0,
+        51.209999999999994,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        8.79,
+        54.137069999999994,
+        10.3
+      ],
+      "centroid": [
+        4.395,
+        52.673534999999994,
+        9.950000000000001
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "solid",
+        "area_m2": 25.73,
+        "subdiv_depth": 5,
+        "aspect_ratio": 3,
+        "cell_w": 8.79,
+        "cell_d": 2.93
+      },
+      "id": 21
+    },
+    {
+      "bbox_min": [
+        0,
+        54.137069999999994,
+        6.4
+      ],
+      "bbox_max": [
+        8.79,
+        60,
+        7.1000000000000005
+      ],
+      "centroid": [
+        4.395,
+        57.068535,
+        6.75
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Course",
+        "register_id": 2,
+        "z_level": 2,
+        "elevation_m": 6.4,
+        "realisation": "solid",
+        "area_m2": 51.54,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.5,
+        "cell_w": 8.79,
+        "cell_d": 5.86
+      },
+      "id": 22
+    },
+    {
+      "bbox_min": [
+        8.79,
+        30,
+        16
+      ],
+      "bbox_max": [
+        19.395,
+        45,
+        16.7
+      ],
+      "centroid": [
+        14.0925,
+        37.5,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 159.08,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.41,
+        "cell_w": 10.61,
+        "cell_d": 15
+      },
+      "id": 25
+    },
+    {
+      "bbox_min": [
+        19.395,
+        30,
+        12.8
+      ],
+      "bbox_max": [
+        30,
+        37.5,
+        13.5
+      ],
+      "centroid": [
+        24.697499999999998,
+        33.75,
+        13.15
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Cornice",
+        "register_id": 4,
+        "z_level": 4,
+        "elevation_m": 12.8,
+        "realisation": "solid",
+        "area_m2": 79.54,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.41,
+        "cell_w": 10.61,
+        "cell_d": 7.5
+      },
+      "id": 27
+    },
+    {
+      "bbox_min": [
+        19.395,
+        37.5,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        30,
+        45,
+        10.3
+      ],
+      "centroid": [
+        24.697499999999998,
+        41.25,
+        9.950000000000001
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "frame",
+        "area_m2": 79.54,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.41,
+        "cell_w": 10.61,
+        "cell_d": 7.5
+      },
+      "id": 28
+    },
+    {
+      "bbox_min": [
+        8.79,
+        45,
+        6.4
+      ],
+      "bbox_max": [
+        30,
+        60,
+        7.1000000000000005
+      ],
+      "centroid": [
+        19.395,
+        52.5,
+        6.75
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Course",
+        "register_id": 2,
+        "z_level": 2,
+        "elevation_m": 6.4,
+        "realisation": "solid",
+        "area_m2": 318.15,
+        "subdiv_depth": 4,
+        "aspect_ratio": 1.41,
+        "cell_w": 21.21,
+        "cell_d": 15
+      },
+      "id": 24
+    },
+    {
+      "bbox_min": [
+        30,
+        0,
+        12.8
+      ],
+      "bbox_max": [
+        37.5,
+        6.18,
+        13.5
+      ],
+      "centroid": [
+        33.75,
+        3.09,
+        13.15
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Cornice",
+        "register_id": 4,
+        "z_level": 4,
+        "elevation_m": 12.8,
+        "realisation": "solid",
+        "area_m2": 46.35,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.21,
+        "cell_w": 7.5,
+        "cell_d": 6.18
+      },
+      "id": 38
+    },
+    {
+      "bbox_min": [
+        30,
+        6.18,
+        16
+      ],
+      "bbox_max": [
+        37.5,
+        12.36,
+        16.7
+      ],
+      "centroid": [
+        33.75,
+        9.27,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 46.35,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.21,
+        "cell_w": 7.5,
+        "cell_d": 6.18
+      },
+      "id": 39
+    },
+    {
+      "bbox_min": [
+        30,
+        12.36,
+        19.200000000000003
+      ],
+      "bbox_max": [
+        33.75,
+        18.54,
+        19.900000000000002
+      ],
+      "centroid": [
+        31.875,
+        15.45,
+        19.550000000000004
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Crown",
+        "register_id": 6,
+        "z_level": 6,
+        "elevation_m": 19.2,
+        "realisation": "frame",
+        "area_m2": 23.17,
+        "subdiv_depth": 7,
+        "aspect_ratio": 1.65,
+        "cell_w": 3.75,
+        "cell_d": 6.18
+      },
+      "id": 41
+    },
+    {
+      "bbox_min": [
+        33.75,
+        12.36,
+        16
+      ],
+      "bbox_max": [
+        37.5,
+        18.54,
+        16.7
+      ],
+      "centroid": [
+        35.625,
+        15.45,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 23.17,
+        "subdiv_depth": 7,
+        "aspect_ratio": 1.65,
+        "cell_w": 3.75,
+        "cell_d": 6.18
+      },
+      "id": 42
+    },
+    {
+      "bbox_min": [
+        30,
+        18.54,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        32.5,
+        37.08,
+        10.3
+      ],
+      "centroid": [
+        31.25,
+        27.81,
+        9.950000000000001
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "solid",
+        "area_m2": 46.35,
+        "subdiv_depth": 6,
+        "aspect_ratio": 7.42,
+        "cell_w": 2.5,
+        "cell_d": 18.54
+      },
+      "id": 43
+    },
+    {
+      "bbox_min": [
+        32.5,
+        18.54,
+        12.8
+      ],
+      "bbox_max": [
+        35,
+        37.08,
+        13.5
+      ],
+      "centroid": [
+        33.75,
+        27.81,
+        13.15
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Cornice",
+        "register_id": 4,
+        "z_level": 4,
+        "elevation_m": 12.8,
+        "realisation": "solid",
+        "area_m2": 46.35,
+        "subdiv_depth": 6,
+        "aspect_ratio": 7.42,
+        "cell_w": 2.5,
+        "cell_d": 18.54
+      },
+      "id": 44
+    },
+    {
+      "bbox_min": [
+        35,
+        18.54,
+        12.8
+      ],
+      "bbox_max": [
+        37.5,
+        37.08,
+        13.5
+      ],
+      "centroid": [
+        36.25,
+        27.81,
+        13.15
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Cornice",
+        "register_id": 4,
+        "z_level": 4,
+        "elevation_m": 12.8,
+        "realisation": "frame",
+        "area_m2": 46.35,
+        "subdiv_depth": 6,
+        "aspect_ratio": 7.42,
+        "cell_w": 2.5,
+        "cell_d": 18.54
+      },
+      "id": 45
+    },
+    {
+      "bbox_min": [
+        37.5,
+        0,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        45,
+        18.54,
+        10.3
+      ],
+      "centroid": [
+        41.25,
+        9.27,
+        9.950000000000001
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "solid",
+        "area_m2": 139.05,
+        "subdiv_depth": 5,
+        "aspect_ratio": 2.47,
+        "cell_w": 7.5,
+        "cell_d": 18.54
+      },
+      "id": 46
+    },
+    {
+      "bbox_min": [
+        37.5,
+        18.54,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        45,
+        30.90618,
+        10.3
+      ],
+      "centroid": [
+        41.25,
+        24.72309,
+        9.950000000000001
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "solid",
+        "area_m2": 92.75,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.65,
+        "cell_w": 7.5,
+        "cell_d": 12.37
+      },
+      "id": 48
+    },
+    {
+      "bbox_min": [
+        37.5,
+        30.90618,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        45,
+        37.08,
+        10.3
+      ],
+      "centroid": [
+        41.25,
+        33.993089999999995,
+        9.950000000000001
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "solid",
+        "area_m2": 46.3,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.21,
+        "cell_w": 7.5,
+        "cell_d": 6.17
+      },
+      "id": 49
+    },
+    {
+      "bbox_min": [
+        45,
+        0,
+        12.8
+      ],
+      "bbox_max": [
+        52.5,
+        13.905,
+        13.5
+      ],
+      "centroid": [
+        48.75,
+        6.9525,
+        13.15
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Cornice",
+        "register_id": 4,
+        "z_level": 4,
+        "elevation_m": 12.8,
+        "realisation": "solid",
+        "area_m2": 104.29,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.85,
+        "cell_w": 7.5,
+        "cell_d": 13.9
+      },
+      "id": 54
+    },
+    {
+      "bbox_min": [
+        52.5,
+        0,
+        19.200000000000003
+      ],
+      "bbox_max": [
+        60,
+        13.905,
+        19.900000000000002
+      ],
+      "centroid": [
+        56.25,
+        6.9525,
+        19.550000000000004
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Crown",
+        "register_id": 6,
+        "z_level": 6,
+        "elevation_m": 19.2,
+        "realisation": "solid",
+        "area_m2": 104.29,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.85,
+        "cell_w": 7.5,
+        "cell_d": 13.9
+      },
+      "id": 55
+    },
+    {
+      "bbox_min": [
+        45,
+        13.905,
+        16
+      ],
+      "bbox_max": [
+        60,
+        18.54,
+        16.7
+      ],
+      "centroid": [
+        52.5,
+        16.2225,
+        16.35
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "frame",
+        "area_m2": 69.52,
+        "subdiv_depth": 5,
+        "aspect_ratio": 3.24,
+        "cell_w": 15,
+        "cell_d": 4.63
+      },
+      "id": 53
+    },
+    {
+      "bbox_min": [
+        45,
+        18.54,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        60,
+        23.97222,
+        10.3
+      ],
+      "centroid": [
+        52.5,
+        21.25611,
+        9.950000000000001
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "frame",
+        "area_m2": 81.48,
+        "subdiv_depth": 5,
+        "aspect_ratio": 2.76,
+        "cell_w": 15,
+        "cell_d": 5.43
+      },
+      "id": 56
+    },
+    {
+      "bbox_min": [
+        45,
+        23.97222,
+        6.4
+      ],
+      "bbox_max": [
+        60,
+        37.08,
+        7.1000000000000005
+      ],
+      "centroid": [
+        52.5,
+        30.52611,
+        6.75
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Course",
+        "register_id": 2,
+        "z_level": 2,
+        "elevation_m": 6.4,
+        "realisation": "solid",
+        "area_m2": 196.62,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.14,
+        "cell_w": 15,
+        "cell_d": 13.11
+      },
+      "id": 57
+    },
+    {
+      "bbox_min": [
+        30,
+        37.08,
+        9.600000000000001
+      ],
+      "bbox_max": [
+        37.5,
+        41.457719999999995,
+        10.3
+      ],
+      "centroid": [
+        33.75,
+        39.26886,
+        9.950000000000001
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Mid",
+        "register_id": 3,
+        "z_level": 3,
+        "elevation_m": 9.6,
+        "realisation": "frame",
+        "area_m2": 32.83,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.71,
+        "cell_w": 7.5,
+        "cell_d": 4.38
+      },
+      "id": 62
+    },
+    {
+      "bbox_min": [
+        30,
+        41.457719999999995,
+        16
+      ],
+      "bbox_max": [
+        37.5,
+        45.83543999999999,
+        16.7
+      ],
+      "centroid": [
+        33.75,
+        43.64657999999999,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 32.83,
+        "subdiv_depth": 5,
+        "aspect_ratio": 1.71,
+        "cell_w": 7.5,
+        "cell_d": 4.38
+      },
+      "id": 63
+    },
+    {
+      "bbox_min": [
+        37.5,
+        37.08,
+        16
+      ],
+      "bbox_max": [
+        43.125,
+        45.83544,
+        16.7
+      ],
+      "centroid": [
+        40.3125,
+        41.457719999999995,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 49.25,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.56,
+        "cell_w": 5.63,
+        "cell_d": 8.76
+      },
+      "id": 66
+    },
+    {
+      "bbox_min": [
+        43.125,
+        37.08,
+        19.200000000000003
+      ],
+      "bbox_max": [
+        48.75,
+        39.99848,
+        19.900000000000002
+      ],
+      "centroid": [
+        45.9375,
+        38.53924,
+        19.550000000000004
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Crown",
+        "register_id": 6,
+        "z_level": 6,
+        "elevation_m": 19.2,
+        "realisation": "solid",
+        "area_m2": 16.42,
+        "subdiv_depth": 7,
+        "aspect_ratio": 1.93,
+        "cell_w": 5.63,
+        "cell_d": 2.92
+      },
+      "id": 68
+    },
+    {
+      "bbox_min": [
+        43.125,
+        39.99848,
+        12.8
+      ],
+      "bbox_max": [
+        48.75,
+        42.91696,
+        13.5
+      ],
+      "centroid": [
+        45.9375,
+        41.45772,
+        13.15
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Cornice",
+        "register_id": 4,
+        "z_level": 4,
+        "elevation_m": 12.8,
+        "realisation": "solid",
+        "area_m2": 16.42,
+        "subdiv_depth": 7,
+        "aspect_ratio": 1.93,
+        "cell_w": 5.63,
+        "cell_d": 2.92
+      },
+      "id": 69
+    },
+    {
+      "bbox_min": [
+        43.125,
+        42.916959999999996,
+        12.8
+      ],
+      "bbox_max": [
+        48.75,
+        45.83544,
+        13.5
+      ],
+      "centroid": [
+        45.9375,
+        44.3762,
+        13.15
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Cornice",
+        "register_id": 4,
+        "z_level": 4,
+        "elevation_m": 12.8,
+        "realisation": "solid",
+        "area_m2": 16.42,
+        "subdiv_depth": 7,
+        "aspect_ratio": 1.93,
+        "cell_w": 5.63,
+        "cell_d": 2.92
+      },
+      "id": 70
+    },
+    {
+      "bbox_min": [
+        48.75,
+        37.08,
+        16
+      ],
+      "bbox_max": [
+        57.1875,
+        45.83544,
+        16.7
+      ],
+      "centroid": [
+        52.96875,
+        41.457719999999995,
+        16.35
+      ],
+      "open": false,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "solid",
+        "area_m2": 73.87,
+        "subdiv_depth": 6,
+        "aspect_ratio": 1.04,
+        "cell_w": 8.44,
+        "cell_d": 8.76
+      },
+      "id": 71
+    },
+    {
+      "bbox_min": [
+        57.1875,
+        37.08,
+        16
+      ],
+      "bbox_max": [
+        60,
+        45.83544,
+        16.7
+      ],
+      "centroid": [
+        58.59375,
+        41.457719999999995,
+        16.35
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Attic",
+        "register_id": 5,
+        "z_level": 5,
+        "elevation_m": 16,
+        "realisation": "frame",
+        "area_m2": 24.62,
+        "subdiv_depth": 6,
+        "aspect_ratio": 3.11,
+        "cell_w": 2.81,
+        "cell_d": 8.76
+      },
+      "id": 72
+    },
+    {
+      "bbox_min": [
+        30,
+        45.83544,
+        6.4
+      ],
+      "bbox_max": [
+        60,
+        60,
+        7.1000000000000005
+      ],
+      "centroid": [
+        45,
+        52.91772,
+        6.75
+      ],
+      "open": true,
+      "dict": {
+        "type": "Plate",
+        "register": "Course",
+        "register_id": 2,
+        "z_level": 2,
+        "elevation_m": 6.4,
+        "realisation": "frame",
+        "area_m2": 424.94,
+        "subdiv_depth": 3,
+        "aspect_ratio": 2.12,
+        "cell_w": 30,
+        "cell_d": 14.16
+      },
+      "id": 59
+    }
+  ],
+  "fins": [
+    {
+      "verts": [
+        [
+          7.5,
+          0,
+          3.2
+        ],
+        [
+          7.5,
+          7.5,
+          3.2
+        ],
+        [
+          7.5,
+          7.5,
+          9.600000000000001
+        ],
+        [
+          7.5,
+          0,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          1,
+          3
+        ],
+        "length_m": 7.5,
+        "between": [
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          7.5,
+          7.5,
+          3.2
+        ],
+        [
+          7.5,
+          15,
+          3.2
+        ],
+        [
+          7.5,
+          15,
+          6.4
+        ],
+        [
+          7.5,
+          7.5,
+          6.4
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          1,
+          2
+        ],
+        "length_m": 7.5,
+        "between": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          7.5,
+          15,
+          3.2
+        ],
+        [
+          7.5,
+          22.5,
+          3.2
+        ],
+        [
+          7.5,
+          22.5,
+          16
+        ],
+        [
+          7.5,
+          15,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 12.8,
+        "reveal": true,
+        "spans_registers": [
+          1,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          4,
+          8
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          7.5,
+          7.5,
+          6.4
+        ],
+        [
+          30,
+          7.5,
+          6.4
+        ],
+        [
+          30,
+          7.5,
+          9.600000000000001
+        ],
+        [
+          7.5,
+          7.5,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          3
+        ],
+        "length_m": 22.5,
+        "between": [
+          6,
+          7
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          7.5,
+          15,
+          6.4
+        ],
+        [
+          30,
+          15,
+          6.4
+        ],
+        [
+          30,
+          15,
+          16
+        ],
+        [
+          7.5,
+          15,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 22.5,
+        "between": [
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          7.5,
+          22.5,
+          3.2
+        ],
+        [
+          7.5,
+          30,
+          3.2
+        ],
+        [
+          7.5,
+          30,
+          6.4
+        ],
+        [
+          7.5,
+          22.5,
+          6.4
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          1,
+          2
+        ],
+        "length_m": 7.5,
+        "between": [
+          4,
+          10
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          7.5,
+          22.5,
+          6.4
+        ],
+        [
+          12,
+          22.5,
+          6.4
+        ],
+        [
+          12,
+          22.5,
+          16
+        ],
+        [
+          7.5,
+          22.5,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 4.5,
+        "between": [
+          8,
+          10
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          12,
+          22.5,
+          12.8
+        ],
+        [
+          16.5,
+          22.5,
+          12.8
+        ],
+        [
+          16.5,
+          22.5,
+          16
+        ],
+        [
+          12,
+          22.5,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 4.5,
+        "between": [
+          8,
+          11
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          12,
+          22.5,
+          6.4
+        ],
+        [
+          12,
+          30,
+          6.4
+        ],
+        [
+          12,
+          30,
+          12.8
+        ],
+        [
+          12,
+          22.5,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          4
+        ],
+        "length_m": 7.5,
+        "between": [
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          16.5,
+          22.5,
+          12.8
+        ],
+        [
+          16.5,
+          30,
+          12.8
+        ],
+        [
+          16.5,
+          30,
+          16
+        ],
+        [
+          16.5,
+          22.5,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          0,
+          30,
+          3.2
+        ],
+        [
+          7.5,
+          30,
+          3.2
+        ],
+        [
+          7.5,
+          30,
+          6.4
+        ],
+        [
+          0,
+          30,
+          6.4
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          1,
+          2
+        ],
+        "length_m": 7.5,
+        "between": [
+          4,
+          19
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          8.79,
+          30,
+          6.4
+        ],
+        [
+          12,
+          30,
+          6.4
+        ],
+        [
+          12,
+          30,
+          16
+        ],
+        [
+          8.79,
+          30,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 3.21,
+        "between": [
+          10,
+          25
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          12,
+          30,
+          12.8
+        ],
+        [
+          16.5,
+          30,
+          12.8
+        ],
+        [
+          16.5,
+          30,
+          16
+        ],
+        [
+          12,
+          30,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 4.5,
+        "between": [
+          11,
+          25
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          19.395,
+          30,
+          12.8
+        ],
+        [
+          21,
+          30,
+          12.8
+        ],
+        [
+          21,
+          30,
+          16
+        ],
+        [
+          19.395,
+          30,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 1.61,
+        "between": [
+          12,
+          27
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          0,
+          35.3025,
+          6.4
+        ],
+        [
+          8.79,
+          35.3025,
+          6.4
+        ],
+        [
+          8.79,
+          35.3025,
+          16
+        ],
+        [
+          0,
+          35.3025,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 8.79,
+        "between": [
+          19,
+          20
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          8.79,
+          30,
+          6.4
+        ],
+        [
+          8.79,
+          35.3025,
+          6.4
+        ],
+        [
+          8.79,
+          35.3025,
+          16
+        ],
+        [
+          8.79,
+          30,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 5.3,
+        "between": [
+          19,
+          25
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          19.395,
+          30,
+          12.8
+        ],
+        [
+          19.395,
+          37.5,
+          12.8
+        ],
+        [
+          19.395,
+          37.5,
+          16
+        ],
+        [
+          19.395,
+          30,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          25,
+          27
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          19.395,
+          37.5,
+          9.600000000000001
+        ],
+        [
+          19.395,
+          45,
+          9.600000000000001
+        ],
+        [
+          19.395,
+          45,
+          16
+        ],
+        [
+          19.395,
+          37.5,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          25,
+          28
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          19.395,
+          37.5,
+          9.600000000000001
+        ],
+        [
+          30,
+          37.5,
+          9.600000000000001
+        ],
+        [
+          30,
+          37.5,
+          12.8
+        ],
+        [
+          19.395,
+          37.5,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 10.61,
+        "between": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          8.79,
+          45,
+          6.4
+        ],
+        [
+          8.79,
+          51.21,
+          6.4
+        ],
+        [
+          8.79,
+          51.21,
+          16
+        ],
+        [
+          8.79,
+          45,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 6.21,
+        "between": [
+          20,
+          24
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          8.79,
+          45,
+          6.4
+        ],
+        [
+          19.395,
+          45,
+          6.4
+        ],
+        [
+          19.395,
+          45,
+          16
+        ],
+        [
+          8.79,
+          45,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 10.61,
+        "between": [
+          25,
+          24
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          19.395,
+          45,
+          6.4
+        ],
+        [
+          30,
+          45,
+          6.4
+        ],
+        [
+          30,
+          45,
+          9.600000000000001
+        ],
+        [
+          19.395,
+          45,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          3
+        ],
+        "length_m": 10.61,
+        "between": [
+          28,
+          24
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          0,
+          51.21,
+          9.600000000000001
+        ],
+        [
+          8.79,
+          51.21,
+          9.600000000000001
+        ],
+        [
+          8.79,
+          51.21,
+          16
+        ],
+        [
+          0,
+          51.21,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 8.79,
+        "between": [
+          20,
+          21
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          0,
+          54.137069999999994,
+          6.4
+        ],
+        [
+          8.79,
+          54.137069999999994,
+          6.4
+        ],
+        [
+          8.79,
+          54.137069999999994,
+          9.600000000000001
+        ],
+        [
+          0,
+          54.137069999999994,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          3
+        ],
+        "length_m": 8.79,
+        "between": [
+          21,
+          22
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          8.79,
+          51.209999999999994,
+          6.4
+        ],
+        [
+          8.79,
+          54.137069999999994,
+          6.4
+        ],
+        [
+          8.79,
+          54.137069999999994,
+          9.600000000000001
+        ],
+        [
+          8.79,
+          51.209999999999994,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          3
+        ],
+        "length_m": 2.93,
+        "between": [
+          21,
+          24
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          25.5,
+          22.5,
+          6.4
+        ],
+        [
+          30,
+          22.5,
+          6.4
+        ],
+        [
+          30,
+          22.5,
+          16
+        ],
+        [
+          25.5,
+          22.5,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 4.5,
+        "between": [
+          8,
+          14
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          25.5,
+          22.5,
+          6.4
+        ],
+        [
+          25.5,
+          30,
+          6.4
+        ],
+        [
+          25.5,
+          30,
+          16
+        ],
+        [
+          25.5,
+          22.5,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          13,
+          14
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          21,
+          30,
+          12.8
+        ],
+        [
+          25.5,
+          30,
+          12.8
+        ],
+        [
+          25.5,
+          30,
+          16
+        ],
+        [
+          21,
+          30,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 4.5,
+        "between": [
+          13,
+          27
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          25.5,
+          30,
+          6.4
+        ],
+        [
+          30,
+          30,
+          6.4
+        ],
+        [
+          30,
+          30,
+          12.8
+        ],
+        [
+          25.5,
+          30,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          4
+        ],
+        "length_m": 4.5,
+        "between": [
+          14,
+          27
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          0,
+          9.600000000000001
+        ],
+        [
+          30,
+          6.18,
+          9.600000000000001
+        ],
+        [
+          30,
+          6.18,
+          12.8
+        ],
+        [
+          30,
+          0,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 6.18,
+        "between": [
+          6,
+          38
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          6.18,
+          9.600000000000001
+        ],
+        [
+          30,
+          7.5,
+          9.600000000000001
+        ],
+        [
+          30,
+          7.5,
+          16
+        ],
+        [
+          30,
+          6.18,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 1.32,
+        "between": [
+          6,
+          39
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          7.5,
+          6.4
+        ],
+        [
+          30,
+          12.36,
+          6.4
+        ],
+        [
+          30,
+          12.36,
+          16
+        ],
+        [
+          30,
+          7.5,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 4.86,
+        "between": [
+          7,
+          39
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          12.36,
+          6.4
+        ],
+        [
+          30,
+          15,
+          6.4
+        ],
+        [
+          30,
+          15,
+          19.200000000000003
+        ],
+        [
+          30,
+          12.36,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 12.8,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          6
+        ],
+        "length_m": 2.64,
+        "between": [
+          7,
+          41
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          15,
+          16
+        ],
+        [
+          30,
+          18.54,
+          16
+        ],
+        [
+          30,
+          18.54,
+          19.200000000000003
+        ],
+        [
+          30,
+          15,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          5,
+          6
+        ],
+        "length_m": 3.54,
+        "between": [
+          8,
+          41
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          30,
+          22.5,
+          9.600000000000001
+        ],
+        [
+          30,
+          22.5,
+          16
+        ],
+        [
+          30,
+          18.54,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 3.96,
+        "between": [
+          8,
+          43
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          6.18,
+          12.8
+        ],
+        [
+          37.5,
+          6.18,
+          12.8
+        ],
+        [
+          37.5,
+          6.18,
+          16
+        ],
+        [
+          30,
+          6.18,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          38,
+          39
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          37.5,
+          0,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          6.18,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          6.18,
+          12.8
+        ],
+        [
+          37.5,
+          0,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 6.18,
+        "between": [
+          38,
+          46
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          12.36,
+          16
+        ],
+        [
+          33.75,
+          12.36,
+          16
+        ],
+        [
+          33.75,
+          12.36,
+          19.200000000000003
+        ],
+        [
+          30,
+          12.36,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          5,
+          6
+        ],
+        "length_m": 3.75,
+        "between": [
+          39,
+          41
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          37.5,
+          6.18,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          12.36,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          12.36,
+          16
+        ],
+        [
+          37.5,
+          6.18,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 6.18,
+        "between": [
+          39,
+          46
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          33.75,
+          12.36,
+          16
+        ],
+        [
+          33.75,
+          18.54,
+          16
+        ],
+        [
+          33.75,
+          18.54,
+          19.200000000000003
+        ],
+        [
+          33.75,
+          12.36,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          5,
+          6
+        ],
+        "length_m": 6.18,
+        "between": [
+          41,
+          42
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          32.5,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          32.5,
+          18.54,
+          19.200000000000003
+        ],
+        [
+          30,
+          18.54,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          6
+        ],
+        "length_m": 2.5,
+        "between": [
+          41,
+          43
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          32.5,
+          18.54,
+          12.8
+        ],
+        [
+          33.75,
+          18.54,
+          12.8
+        ],
+        [
+          33.75,
+          18.54,
+          19.200000000000003
+        ],
+        [
+          32.5,
+          18.54,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          6
+        ],
+        "length_m": 1.25,
+        "between": [
+          41,
+          44
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          33.75,
+          18.54,
+          12.8
+        ],
+        [
+          35,
+          18.54,
+          12.8
+        ],
+        [
+          35,
+          18.54,
+          16
+        ],
+        [
+          33.75,
+          18.54,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 1.25,
+        "between": [
+          42,
+          44
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          35,
+          18.54,
+          12.8
+        ],
+        [
+          37.5,
+          18.54,
+          12.8
+        ],
+        [
+          37.5,
+          18.54,
+          16
+        ],
+        [
+          35,
+          18.54,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 2.5,
+        "between": [
+          42,
+          45
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          37.5,
+          12.36,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          18.54,
+          16
+        ],
+        [
+          37.5,
+          12.36,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 6.18,
+        "between": [
+          42,
+          46
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          32.5,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          32.5,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          32.5,
+          37.08,
+          12.8
+        ],
+        [
+          32.5,
+          18.54,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 18.54,
+        "between": [
+          43,
+          44
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          37.5,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          30.90618,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          30.90618,
+          12.8
+        ],
+        [
+          37.5,
+          18.54,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 12.37,
+        "between": [
+          45,
+          48
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          22.5,
+          6.4
+        ],
+        [
+          30,
+          30,
+          6.4
+        ],
+        [
+          30,
+          30,
+          9.600000000000001
+        ],
+        [
+          30,
+          22.5,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          3
+        ],
+        "length_m": 7.5,
+        "between": [
+          14,
+          43
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          45,
+          0,
+          9.600000000000001
+        ],
+        [
+          45,
+          13.905,
+          9.600000000000001
+        ],
+        [
+          45,
+          13.905,
+          12.8
+        ],
+        [
+          45,
+          0,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 13.9,
+        "between": [
+          46,
+          54
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          45,
+          13.905,
+          9.600000000000001
+        ],
+        [
+          45,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          45,
+          18.54,
+          16
+        ],
+        [
+          45,
+          13.905,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 4.63,
+        "between": [
+          46,
+          53
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          45,
+          13.905,
+          12.8
+        ],
+        [
+          52.5,
+          13.905,
+          12.8
+        ],
+        [
+          52.5,
+          13.905,
+          16
+        ],
+        [
+          45,
+          13.905,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          54,
+          53
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          45,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          60,
+          18.54,
+          9.600000000000001
+        ],
+        [
+          60,
+          18.54,
+          16
+        ],
+        [
+          45,
+          18.54,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 15,
+        "between": [
+          53,
+          56
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          45,
+          23.97222,
+          6.4
+        ],
+        [
+          45,
+          30.90618,
+          6.4
+        ],
+        [
+          45,
+          30.90618,
+          9.600000000000001
+        ],
+        [
+          45,
+          23.97222,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          3
+        ],
+        "length_m": 6.93,
+        "between": [
+          48,
+          57
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          45,
+          23.97222,
+          6.4
+        ],
+        [
+          60,
+          23.97222,
+          6.4
+        ],
+        [
+          60,
+          23.97222,
+          9.600000000000001
+        ],
+        [
+          45,
+          23.97222,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          3
+        ],
+        "length_m": 15,
+        "between": [
+          56,
+          57
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          52.5,
+          0,
+          12.8
+        ],
+        [
+          52.5,
+          13.905,
+          12.8
+        ],
+        [
+          52.5,
+          13.905,
+          19.200000000000003
+        ],
+        [
+          52.5,
+          0,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          6
+        ],
+        "length_m": 13.9,
+        "between": [
+          54,
+          55
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          52.5,
+          13.905,
+          16
+        ],
+        [
+          60,
+          13.905,
+          16
+        ],
+        [
+          60,
+          13.905,
+          19.200000000000003
+        ],
+        [
+          52.5,
+          13.905,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          5,
+          6
+        ],
+        "length_m": 7.5,
+        "between": [
+          55,
+          53
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          30,
+          9.600000000000001
+        ],
+        [
+          30,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          30,
+          37.08,
+          12.8
+        ],
+        [
+          30,
+          30,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 7.08,
+        "between": [
+          27,
+          43
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          30,
+          37.5,
+          9.600000000000001
+        ],
+        [
+          30,
+          37.5,
+          12.8
+        ],
+        [
+          30,
+          37.08,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 0.42,
+        "between": [
+          27,
+          62
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          32.5,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          35,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          35,
+          37.08,
+          12.8
+        ],
+        [
+          32.5,
+          37.08,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 2.5,
+        "between": [
+          44,
+          62
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          37.5,
+          30.90618,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          37.08,
+          12.8
+        ],
+        [
+          37.5,
+          30.90618,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 6.17,
+        "between": [
+          45,
+          49
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          35,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          37.08,
+          12.8
+        ],
+        [
+          35,
+          37.08,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          4
+        ],
+        "length_m": 2.5,
+        "between": [
+          45,
+          62
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          37.5,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          43.125,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          43.125,
+          37.08,
+          16
+        ],
+        [
+          37.5,
+          37.08,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 5.63,
+        "between": [
+          49,
+          66
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          37.5,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          41.457719999999995,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          41.457719999999995,
+          16
+        ],
+        [
+          37.5,
+          37.08,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 4.38,
+        "between": [
+          62,
+          66
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          45,
+          30.90618,
+          6.4
+        ],
+        [
+          45,
+          37.08,
+          6.4
+        ],
+        [
+          45,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          45,
+          30.90618,
+          9.600000000000001
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          3
+        ],
+        "length_m": 6.17,
+        "between": [
+          49,
+          57
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          43.125,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          45,
+          37.08,
+          9.600000000000001
+        ],
+        [
+          45,
+          37.08,
+          19.200000000000003
+        ],
+        [
+          43.125,
+          37.08,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          6
+        ],
+        "length_m": 1.88,
+        "between": [
+          49,
+          68
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          45,
+          37.08,
+          6.4
+        ],
+        [
+          48.75,
+          37.08,
+          6.4
+        ],
+        [
+          48.75,
+          37.08,
+          19.200000000000003
+        ],
+        [
+          45,
+          37.08,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 12.8,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          6
+        ],
+        "length_m": 3.75,
+        "between": [
+          57,
+          68
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          48.75,
+          37.08,
+          6.4
+        ],
+        [
+          57.1875,
+          37.08,
+          6.4
+        ],
+        [
+          57.1875,
+          37.08,
+          16
+        ],
+        [
+          48.75,
+          37.08,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 8.44,
+        "between": [
+          57,
+          71
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          43.125,
+          37.08,
+          16
+        ],
+        [
+          43.125,
+          39.99848,
+          16
+        ],
+        [
+          43.125,
+          39.99848,
+          19.200000000000003
+        ],
+        [
+          43.125,
+          37.08,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          5,
+          6
+        ],
+        "length_m": 2.92,
+        "between": [
+          66,
+          68
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          43.125,
+          39.99848,
+          12.8
+        ],
+        [
+          43.125,
+          42.91696,
+          12.8
+        ],
+        [
+          43.125,
+          42.91696,
+          16
+        ],
+        [
+          43.125,
+          39.99848,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 2.92,
+        "between": [
+          66,
+          69
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          43.125,
+          39.99848,
+          12.8
+        ],
+        [
+          48.75,
+          39.99848,
+          12.8
+        ],
+        [
+          48.75,
+          39.99848,
+          19.200000000000003
+        ],
+        [
+          43.125,
+          39.99848,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          6
+        ],
+        "length_m": 5.63,
+        "between": [
+          68,
+          69
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          48.75,
+          37.08,
+          16
+        ],
+        [
+          48.75,
+          39.99848,
+          16
+        ],
+        [
+          48.75,
+          39.99848,
+          19.200000000000003
+        ],
+        [
+          48.75,
+          37.08,
+          19.200000000000003
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          5,
+          6
+        ],
+        "length_m": 2.92,
+        "between": [
+          68,
+          71
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          48.75,
+          39.99848,
+          12.8
+        ],
+        [
+          48.75,
+          42.91696,
+          12.8
+        ],
+        [
+          48.75,
+          42.91696,
+          16
+        ],
+        [
+          48.75,
+          39.99848,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 2.92,
+        "between": [
+          69,
+          71
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          57.1875,
+          37.08,
+          6.4
+        ],
+        [
+          60,
+          37.08,
+          6.4
+        ],
+        [
+          60,
+          37.08,
+          16
+        ],
+        [
+          57.1875,
+          37.08,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 2.81,
+        "between": [
+          57,
+          72
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          41.457719999999995,
+          9.600000000000001
+        ],
+        [
+          30,
+          45,
+          9.600000000000001
+        ],
+        [
+          30,
+          45,
+          16
+        ],
+        [
+          30,
+          41.457719999999995,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 3.54,
+        "between": [
+          28,
+          63
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          45,
+          6.4
+        ],
+        [
+          30,
+          45.83543999999999,
+          6.4
+        ],
+        [
+          30,
+          45.83543999999999,
+          16
+        ],
+        [
+          30,
+          45,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 0.84,
+        "between": [
+          24,
+          63
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          41.457719999999995,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          41.457719999999995,
+          9.600000000000001
+        ],
+        [
+          37.5,
+          41.457719999999995,
+          16
+        ],
+        [
+          30,
+          41.457719999999995,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          3,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          62,
+          63
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          30,
+          45.83543999999999,
+          6.4
+        ],
+        [
+          37.5,
+          45.83543999999999,
+          6.4
+        ],
+        [
+          37.5,
+          45.83543999999999,
+          16
+        ],
+        [
+          30,
+          45.83543999999999,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 7.5,
+        "between": [
+          63,
+          59
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          37.5,
+          45.83544,
+          6.4
+        ],
+        [
+          43.125,
+          45.83544,
+          6.4
+        ],
+        [
+          43.125,
+          45.83544,
+          16
+        ],
+        [
+          37.5,
+          45.83544,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 5.63,
+        "between": [
+          66,
+          59
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          43.125,
+          42.916959999999996,
+          12.8
+        ],
+        [
+          43.125,
+          45.83544,
+          12.8
+        ],
+        [
+          43.125,
+          45.83544,
+          16
+        ],
+        [
+          43.125,
+          42.916959999999996,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 2.92,
+        "between": [
+          66,
+          70
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          48.75,
+          42.916959999999996,
+          12.8
+        ],
+        [
+          48.75,
+          45.83544,
+          12.8
+        ],
+        [
+          48.75,
+          45.83544,
+          16
+        ],
+        [
+          48.75,
+          42.916959999999996,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "NS",
+        "step_m": 3.2,
+        "reveal": true,
+        "spans_registers": [
+          4,
+          5
+        ],
+        "length_m": 2.92,
+        "between": [
+          70,
+          71
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          43.125,
+          45.83544,
+          6.4
+        ],
+        [
+          48.75,
+          45.83544,
+          6.4
+        ],
+        [
+          48.75,
+          45.83544,
+          12.8
+        ],
+        [
+          43.125,
+          45.83544,
+          12.8
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 6.4,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          4
+        ],
+        "length_m": 5.63,
+        "between": [
+          70,
+          59
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          48.75,
+          45.83544,
+          6.4
+        ],
+        [
+          57.1875,
+          45.83544,
+          6.4
+        ],
+        [
+          57.1875,
+          45.83544,
+          16
+        ],
+        [
+          48.75,
+          45.83544,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 8.44,
+        "between": [
+          71,
+          59
+        ]
+      }
+    },
+    {
+      "verts": [
+        [
+          57.1875,
+          45.83544,
+          6.4
+        ],
+        [
+          60,
+          45.83544,
+          6.4
+        ],
+        [
+          60,
+          45.83544,
+          16
+        ],
+        [
+          57.1875,
+          45.83544,
+          16
+        ]
+      ],
+      "dict": {
+        "type": "Fin",
+        "orientation": "EW",
+        "step_m": 9.6,
+        "reveal": true,
+        "spans_registers": [
+          2,
+          5
+        ],
+        "length_m": 2.81,
+        "between": [
+          72,
+          59
+        ]
+      }
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": 4,
+        "x": 0,
+        "y": 0,
+        "reg": 1,
+        "z": 3.2,
+        "open": false,
+        "depth": 3,
+        "area": 225,
+        "cx": 3.75,
+        "cy": 15,
+        "centroid": [
+          3.75,
+          15,
+          3.2
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Plinth",
+          "register_id": 1,
+          "z_level": 1,
+          "elevation_m": 3.2,
+          "realisation": "solid",
+          "subdiv_depth": 3,
+          "area_m2": 225,
+          "centroid_m": [
+            3.75,
+            15,
+            3.2
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "x": 7.5,
+        "y": 0,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": true,
+        "depth": 4,
+        "area": 168.75,
+        "cx": 18.75,
+        "cy": 3.75,
+        "centroid": [
+          18.75,
+          3.75,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "frame",
+          "subdiv_depth": 4,
+          "area_m2": 168.75,
+          "centroid_m": [
+            18.75,
+            3.75,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "x": 7.5,
+        "y": 7.5,
+        "reg": 2,
+        "z": 6.4,
+        "open": false,
+        "depth": 4,
+        "area": 168.75,
+        "cx": 18.75,
+        "cy": 11.25,
+        "centroid": [
+          18.75,
+          11.25,
+          6.4
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Course",
+          "register_id": 2,
+          "z_level": 2,
+          "elevation_m": 6.4,
+          "realisation": "solid",
+          "subdiv_depth": 4,
+          "area_m2": 168.75,
+          "centroid_m": [
+            18.75,
+            11.25,
+            6.4
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "x": 7.5,
+        "y": 15,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 4,
+        "area": 168.75,
+        "cx": 18.75,
+        "cy": 18.75,
+        "centroid": [
+          18.75,
+          18.75,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 4,
+          "area_m2": 168.75,
+          "centroid_m": [
+            18.75,
+            18.75,
+            16
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "x": 7.5,
+        "y": 22.5,
+        "reg": 2,
+        "z": 6.4,
+        "open": false,
+        "depth": 5,
+        "area": 33.75,
+        "cx": 9.75,
+        "cy": 26.25,
+        "centroid": [
+          9.75,
+          26.25,
+          6.4
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Course",
+          "register_id": 2,
+          "z_level": 2,
+          "elevation_m": 6.4,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 33.75,
+          "centroid_m": [
+            9.75,
+            26.25,
+            6.4
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "x": 12,
+        "y": 22.5,
+        "reg": 4,
+        "z": 12.8,
+        "open": true,
+        "depth": 5,
+        "area": 33.75,
+        "cx": 14.25,
+        "cy": 26.25,
+        "centroid": [
+          14.25,
+          26.25,
+          12.8
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Cornice",
+          "register_id": 4,
+          "z_level": 4,
+          "elevation_m": 12.8,
+          "realisation": "frame",
+          "subdiv_depth": 5,
+          "area_m2": 33.75,
+          "centroid_m": [
+            14.25,
+            26.25,
+            12.8
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "x": 16.5,
+        "y": 22.5,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 5,
+        "area": 33.75,
+        "cx": 18.75,
+        "cy": 26.25,
+        "centroid": [
+          18.75,
+          26.25,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 33.75,
+          "centroid_m": [
+            18.75,
+            26.25,
+            16
+          ]
+        }
+      },
+      {
+        "id": 13,
+        "x": 21,
+        "y": 22.5,
+        "reg": 5,
+        "z": 16,
+        "open": true,
+        "depth": 5,
+        "area": 33.75,
+        "cx": 23.25,
+        "cy": 26.25,
+        "centroid": [
+          23.25,
+          26.25,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "frame",
+          "subdiv_depth": 5,
+          "area_m2": 33.75,
+          "centroid_m": [
+            23.25,
+            26.25,
+            16
+          ]
+        }
+      },
+      {
+        "id": 14,
+        "x": 25.5,
+        "y": 22.5,
+        "reg": 2,
+        "z": 6.4,
+        "open": false,
+        "depth": 5,
+        "area": 33.75,
+        "cx": 27.75,
+        "cy": 26.25,
+        "centroid": [
+          27.75,
+          26.25,
+          6.4
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Course",
+          "register_id": 2,
+          "z_level": 2,
+          "elevation_m": 6.4,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 33.75,
+          "centroid_m": [
+            27.75,
+            26.25,
+            6.4
+          ]
+        }
+      },
+      {
+        "id": 19,
+        "x": 0,
+        "y": 30,
+        "reg": 2,
+        "z": 6.4,
+        "open": false,
+        "depth": 5,
+        "area": 46.60897499999999,
+        "cx": 4.395,
+        "cy": 32.65125,
+        "centroid": [
+          4.39,
+          32.65,
+          6.4
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Course",
+          "register_id": 2,
+          "z_level": 2,
+          "elevation_m": 6.4,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 46.61,
+          "centroid_m": [
+            4.39,
+            32.65,
+            6.4
+          ]
+        }
+      },
+      {
+        "id": 20,
+        "x": 0,
+        "y": 35.3025,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 5,
+        "area": 139.826925,
+        "cx": 4.395,
+        "cy": 43.25625,
+        "centroid": [
+          4.39,
+          43.26,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 139.83,
+          "centroid_m": [
+            4.39,
+            43.26,
+            16
+          ]
+        }
+      },
+      {
+        "id": 21,
+        "x": 0,
+        "y": 51.209999999999994,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": false,
+        "depth": 5,
+        "area": 25.728945300000007,
+        "cx": 4.395,
+        "cy": 52.673534999999994,
+        "centroid": [
+          4.39,
+          52.67,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 25.73,
+          "centroid_m": [
+            4.39,
+            52.67,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 22,
+        "x": 0,
+        "y": 54.137069999999994,
+        "reg": 2,
+        "z": 6.4,
+        "open": false,
+        "depth": 5,
+        "area": 51.535154700000014,
+        "cx": 4.395,
+        "cy": 57.068535,
+        "centroid": [
+          4.39,
+          57.07,
+          6.4
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Course",
+          "register_id": 2,
+          "z_level": 2,
+          "elevation_m": 6.4,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 51.54,
+          "centroid_m": [
+            4.39,
+            57.07,
+            6.4
+          ]
+        }
+      },
+      {
+        "id": 25,
+        "x": 8.79,
+        "y": 30,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 5,
+        "area": 159.07500000000002,
+        "cx": 14.0925,
+        "cy": 37.5,
+        "centroid": [
+          14.09,
+          37.5,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 159.08,
+          "centroid_m": [
+            14.09,
+            37.5,
+            16
+          ]
+        }
+      },
+      {
+        "id": 27,
+        "x": 19.395,
+        "y": 30,
+        "reg": 4,
+        "z": 12.8,
+        "open": false,
+        "depth": 6,
+        "area": 79.53750000000001,
+        "cx": 24.697499999999998,
+        "cy": 33.75,
+        "centroid": [
+          24.7,
+          33.75,
+          12.8
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Cornice",
+          "register_id": 4,
+          "z_level": 4,
+          "elevation_m": 12.8,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 79.54,
+          "centroid_m": [
+            24.7,
+            33.75,
+            12.8
+          ]
+        }
+      },
+      {
+        "id": 28,
+        "x": 19.395,
+        "y": 37.5,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": true,
+        "depth": 6,
+        "area": 79.53750000000001,
+        "cx": 24.697499999999998,
+        "cy": 41.25,
+        "centroid": [
+          24.7,
+          41.25,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "frame",
+          "subdiv_depth": 6,
+          "area_m2": 79.54,
+          "centroid_m": [
+            24.7,
+            41.25,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 24,
+        "x": 8.79,
+        "y": 45,
+        "reg": 2,
+        "z": 6.4,
+        "open": false,
+        "depth": 4,
+        "area": 318.15000000000003,
+        "cx": 19.395,
+        "cy": 52.5,
+        "centroid": [
+          19.39,
+          52.5,
+          6.4
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Course",
+          "register_id": 2,
+          "z_level": 2,
+          "elevation_m": 6.4,
+          "realisation": "solid",
+          "subdiv_depth": 4,
+          "area_m2": 318.15,
+          "centroid_m": [
+            19.39,
+            52.5,
+            6.4
+          ]
+        }
+      },
+      {
+        "id": 38,
+        "x": 30,
+        "y": 0,
+        "reg": 4,
+        "z": 12.8,
+        "open": false,
+        "depth": 6,
+        "area": 46.349999999999994,
+        "cx": 33.75,
+        "cy": 3.09,
+        "centroid": [
+          33.75,
+          3.09,
+          12.8
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Cornice",
+          "register_id": 4,
+          "z_level": 4,
+          "elevation_m": 12.8,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 46.35,
+          "centroid_m": [
+            33.75,
+            3.09,
+            12.8
+          ]
+        }
+      },
+      {
+        "id": 39,
+        "x": 30,
+        "y": 6.18,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 6,
+        "area": 46.349999999999994,
+        "cx": 33.75,
+        "cy": 9.27,
+        "centroid": [
+          33.75,
+          9.27,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 46.35,
+          "centroid_m": [
+            33.75,
+            9.27,
+            16
+          ]
+        }
+      },
+      {
+        "id": 41,
+        "x": 30,
+        "y": 12.36,
+        "reg": 6,
+        "z": 19.200000000000003,
+        "open": true,
+        "depth": 7,
+        "area": 23.174999999999997,
+        "cx": 31.875,
+        "cy": 15.45,
+        "centroid": [
+          31.88,
+          15.45,
+          19.2
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Crown",
+          "register_id": 6,
+          "z_level": 6,
+          "elevation_m": 19.2,
+          "realisation": "frame",
+          "subdiv_depth": 7,
+          "area_m2": 23.17,
+          "centroid_m": [
+            31.88,
+            15.45,
+            19.2
+          ]
+        }
+      },
+      {
+        "id": 42,
+        "x": 33.75,
+        "y": 12.36,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 7,
+        "area": 23.174999999999997,
+        "cx": 35.625,
+        "cy": 15.45,
+        "centroid": [
+          35.63,
+          15.45,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 7,
+          "area_m2": 23.17,
+          "centroid_m": [
+            35.63,
+            15.45,
+            16
+          ]
+        }
+      },
+      {
+        "id": 43,
+        "x": 30,
+        "y": 18.54,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": false,
+        "depth": 6,
+        "area": 46.349999999999994,
+        "cx": 31.25,
+        "cy": 27.81,
+        "centroid": [
+          31.25,
+          27.81,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 46.35,
+          "centroid_m": [
+            31.25,
+            27.81,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 44,
+        "x": 32.5,
+        "y": 18.54,
+        "reg": 4,
+        "z": 12.8,
+        "open": false,
+        "depth": 6,
+        "area": 46.349999999999994,
+        "cx": 33.75,
+        "cy": 27.81,
+        "centroid": [
+          33.75,
+          27.81,
+          12.8
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Cornice",
+          "register_id": 4,
+          "z_level": 4,
+          "elevation_m": 12.8,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 46.35,
+          "centroid_m": [
+            33.75,
+            27.81,
+            12.8
+          ]
+        }
+      },
+      {
+        "id": 45,
+        "x": 35,
+        "y": 18.54,
+        "reg": 4,
+        "z": 12.8,
+        "open": true,
+        "depth": 6,
+        "area": 46.349999999999994,
+        "cx": 36.25,
+        "cy": 27.81,
+        "centroid": [
+          36.25,
+          27.81,
+          12.8
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Cornice",
+          "register_id": 4,
+          "z_level": 4,
+          "elevation_m": 12.8,
+          "realisation": "frame",
+          "subdiv_depth": 6,
+          "area_m2": 46.35,
+          "centroid_m": [
+            36.25,
+            27.81,
+            12.8
+          ]
+        }
+      },
+      {
+        "id": 46,
+        "x": 37.5,
+        "y": 0,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": false,
+        "depth": 5,
+        "area": 139.04999999999998,
+        "cx": 41.25,
+        "cy": 9.27,
+        "centroid": [
+          41.25,
+          9.27,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 139.05,
+          "centroid_m": [
+            41.25,
+            9.27,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 48,
+        "x": 37.5,
+        "y": 18.54,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": false,
+        "depth": 6,
+        "area": 92.74635,
+        "cx": 41.25,
+        "cy": 24.72309,
+        "centroid": [
+          41.25,
+          24.72,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 92.75,
+          "centroid_m": [
+            41.25,
+            24.72,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 49,
+        "x": 37.5,
+        "y": 30.90618,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": false,
+        "depth": 6,
+        "area": 46.30364999999999,
+        "cx": 41.25,
+        "cy": 33.993089999999995,
+        "centroid": [
+          41.25,
+          33.99,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 46.3,
+          "centroid_m": [
+            41.25,
+            33.99,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 54,
+        "x": 45,
+        "y": 0,
+        "reg": 4,
+        "z": 12.8,
+        "open": false,
+        "depth": 6,
+        "area": 104.2875,
+        "cx": 48.75,
+        "cy": 6.9525,
+        "centroid": [
+          48.75,
+          6.95,
+          12.8
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Cornice",
+          "register_id": 4,
+          "z_level": 4,
+          "elevation_m": 12.8,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 104.29,
+          "centroid_m": [
+            48.75,
+            6.95,
+            12.8
+          ]
+        }
+      },
+      {
+        "id": 55,
+        "x": 52.5,
+        "y": 0,
+        "reg": 6,
+        "z": 19.200000000000003,
+        "open": false,
+        "depth": 6,
+        "area": 104.2875,
+        "cx": 56.25,
+        "cy": 6.9525,
+        "centroid": [
+          56.25,
+          6.95,
+          19.2
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Crown",
+          "register_id": 6,
+          "z_level": 6,
+          "elevation_m": 19.2,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 104.29,
+          "centroid_m": [
+            56.25,
+            6.95,
+            19.2
+          ]
+        }
+      },
+      {
+        "id": 53,
+        "x": 45,
+        "y": 13.905,
+        "reg": 5,
+        "z": 16,
+        "open": true,
+        "depth": 5,
+        "area": 69.52499999999999,
+        "cx": 52.5,
+        "cy": 16.2225,
+        "centroid": [
+          52.5,
+          16.22,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "frame",
+          "subdiv_depth": 5,
+          "area_m2": 69.52,
+          "centroid_m": [
+            52.5,
+            16.22,
+            16
+          ]
+        }
+      },
+      {
+        "id": 56,
+        "x": 45,
+        "y": 18.54,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": true,
+        "depth": 5,
+        "area": 81.48329999999999,
+        "cx": 52.5,
+        "cy": 21.25611,
+        "centroid": [
+          52.5,
+          21.26,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "frame",
+          "subdiv_depth": 5,
+          "area_m2": 81.48,
+          "centroid_m": [
+            52.5,
+            21.26,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 57,
+        "x": 45,
+        "y": 23.97222,
+        "reg": 2,
+        "z": 6.4,
+        "open": false,
+        "depth": 5,
+        "area": 196.6167,
+        "cx": 52.5,
+        "cy": 30.52611,
+        "centroid": [
+          52.5,
+          30.53,
+          6.4
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Course",
+          "register_id": 2,
+          "z_level": 2,
+          "elevation_m": 6.4,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 196.62,
+          "centroid_m": [
+            52.5,
+            30.53,
+            6.4
+          ]
+        }
+      },
+      {
+        "id": 62,
+        "x": 30,
+        "y": 37.08,
+        "reg": 3,
+        "z": 9.600000000000001,
+        "open": true,
+        "depth": 5,
+        "area": 32.8329,
+        "cx": 33.75,
+        "cy": 39.26886,
+        "centroid": [
+          33.75,
+          39.27,
+          9.6
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Mid",
+          "register_id": 3,
+          "z_level": 3,
+          "elevation_m": 9.6,
+          "realisation": "frame",
+          "subdiv_depth": 5,
+          "area_m2": 32.83,
+          "centroid_m": [
+            33.75,
+            39.27,
+            9.6
+          ]
+        }
+      },
+      {
+        "id": 63,
+        "x": 30,
+        "y": 41.457719999999995,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 5,
+        "area": 32.8329,
+        "cx": 33.75,
+        "cy": 43.64657999999999,
+        "centroid": [
+          33.75,
+          43.65,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 5,
+          "area_m2": 32.83,
+          "centroid_m": [
+            33.75,
+            43.65,
+            16
+          ]
+        }
+      },
+      {
+        "id": 66,
+        "x": 37.5,
+        "y": 37.08,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 6,
+        "area": 49.24935,
+        "cx": 40.3125,
+        "cy": 41.457719999999995,
+        "centroid": [
+          40.31,
+          41.46,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 49.25,
+          "centroid_m": [
+            40.31,
+            41.46,
+            16
+          ]
+        }
+      },
+      {
+        "id": 68,
+        "x": 43.125,
+        "y": 37.08,
+        "reg": 6,
+        "z": 19.200000000000003,
+        "open": false,
+        "depth": 7,
+        "area": 16.41645,
+        "cx": 45.9375,
+        "cy": 38.53924,
+        "centroid": [
+          45.94,
+          38.54,
+          19.2
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Crown",
+          "register_id": 6,
+          "z_level": 6,
+          "elevation_m": 19.2,
+          "realisation": "solid",
+          "subdiv_depth": 7,
+          "area_m2": 16.42,
+          "centroid_m": [
+            45.94,
+            38.54,
+            19.2
+          ]
+        }
+      },
+      {
+        "id": 69,
+        "x": 43.125,
+        "y": 39.99848,
+        "reg": 4,
+        "z": 12.8,
+        "open": false,
+        "depth": 7,
+        "area": 16.41645,
+        "cx": 45.9375,
+        "cy": 41.45772,
+        "centroid": [
+          45.94,
+          41.46,
+          12.8
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Cornice",
+          "register_id": 4,
+          "z_level": 4,
+          "elevation_m": 12.8,
+          "realisation": "solid",
+          "subdiv_depth": 7,
+          "area_m2": 16.42,
+          "centroid_m": [
+            45.94,
+            41.46,
+            12.8
+          ]
+        }
+      },
+      {
+        "id": 70,
+        "x": 43.125,
+        "y": 42.916959999999996,
+        "reg": 4,
+        "z": 12.8,
+        "open": false,
+        "depth": 7,
+        "area": 16.41645,
+        "cx": 45.9375,
+        "cy": 44.3762,
+        "centroid": [
+          45.94,
+          44.38,
+          12.8
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Cornice",
+          "register_id": 4,
+          "z_level": 4,
+          "elevation_m": 12.8,
+          "realisation": "solid",
+          "subdiv_depth": 7,
+          "area_m2": 16.42,
+          "centroid_m": [
+            45.94,
+            44.38,
+            12.8
+          ]
+        }
+      },
+      {
+        "id": 71,
+        "x": 48.75,
+        "y": 37.08,
+        "reg": 5,
+        "z": 16,
+        "open": false,
+        "depth": 6,
+        "area": 73.874025,
+        "cx": 52.96875,
+        "cy": 41.457719999999995,
+        "centroid": [
+          52.97,
+          41.46,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "solid",
+          "subdiv_depth": 6,
+          "area_m2": 73.87,
+          "centroid_m": [
+            52.97,
+            41.46,
+            16
+          ]
+        }
+      },
+      {
+        "id": 72,
+        "x": 57.1875,
+        "y": 37.08,
+        "reg": 5,
+        "z": 16,
+        "open": true,
+        "depth": 6,
+        "area": 24.624675,
+        "cx": 58.59375,
+        "cy": 41.457719999999995,
+        "centroid": [
+          58.59,
+          41.46,
+          16
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Attic",
+          "register_id": 5,
+          "z_level": 5,
+          "elevation_m": 16,
+          "realisation": "frame",
+          "subdiv_depth": 6,
+          "area_m2": 24.62,
+          "centroid_m": [
+            58.59,
+            41.46,
+            16
+          ]
+        }
+      },
+      {
+        "id": 59,
+        "x": 30,
+        "y": 45.83544,
+        "reg": 2,
+        "z": 6.4,
+        "open": true,
+        "depth": 3,
+        "area": 424.93680000000006,
+        "cx": 45,
+        "cy": 52.91772,
+        "centroid": [
+          45,
+          52.92,
+          6.4
+        ],
+        "dict": {
+          "type": "Cell",
+          "register": "Course",
+          "register_id": 2,
+          "z_level": 2,
+          "elevation_m": 6.4,
+          "realisation": "frame",
+          "subdiv_depth": 3,
+          "area_m2": 424.94,
+          "centroid_m": [
+            45,
+            52.92,
+            6.4
+          ]
+        }
+      }
+    ],
+    "edges": [
+      {
+        "from": 4,
+        "to": 6,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 4,
+        "to": 7,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 4,
+        "to": 8,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 12.8,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 12.8
+        }
+      },
+      {
+        "from": 4,
+        "to": 10,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 4,
+        "to": 19,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 6,
+        "to": 7,
+        "kind": "reveal",
+        "length": 22.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 22.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 6,
+        "to": 38,
+        "kind": "reveal",
+        "length": 6.18,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.18,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 6,
+        "to": 39,
+        "kind": "reveal",
+        "length": 1.32,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 1.32,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 7,
+        "to": 8,
+        "kind": "reveal",
+        "length": 22.5,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 22.5,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 7,
+        "to": 39,
+        "kind": "reveal",
+        "length": 4.86,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.86,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 7,
+        "to": 41,
+        "kind": "reveal",
+        "length": 2.64,
+        "dz": 12.8,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.64,
+          "z_step_m": 12.8
+        }
+      },
+      {
+        "from": 8,
+        "to": 10,
+        "kind": "reveal",
+        "length": 4.5,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.5,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 8,
+        "to": 11,
+        "kind": "reveal",
+        "length": 4.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 8,
+        "to": 12,
+        "kind": "coplanar",
+        "length": 4.5,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 4.5,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 8,
+        "to": 13,
+        "kind": "coplanar",
+        "length": 4.5,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 4.5,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 8,
+        "to": 14,
+        "kind": "reveal",
+        "length": 4.5,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.5,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 8,
+        "to": 41,
+        "kind": "reveal",
+        "length": 3.54,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 3.54,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 8,
+        "to": 43,
+        "kind": "reveal",
+        "length": 3.96,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 3.96,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 10,
+        "to": 19,
+        "kind": "coplanar",
+        "length": 1.29,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 1.29,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 10,
+        "to": 25,
+        "kind": "reveal",
+        "length": 3.21,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 3.21,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 11,
+        "to": 12,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 11,
+        "to": 25,
+        "kind": "reveal",
+        "length": 4.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 12,
+        "to": 25,
+        "kind": "coplanar",
+        "length": 2.89,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 2.89,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 12,
+        "to": 27,
+        "kind": "reveal",
+        "length": 1.61,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 1.61,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 12,
+        "to": 13,
+        "kind": "coplanar",
+        "length": 7.5,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 7.5,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 13,
+        "to": 14,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 13,
+        "to": 27,
+        "kind": "reveal",
+        "length": 4.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 14,
+        "to": 27,
+        "kind": "reveal",
+        "length": 4.5,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.5,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 14,
+        "to": 43,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 19,
+        "to": 20,
+        "kind": "reveal",
+        "length": 8.79,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 8.79,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 19,
+        "to": 25,
+        "kind": "reveal",
+        "length": 5.3,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 5.3,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 20,
+        "to": 25,
+        "kind": "coplanar",
+        "length": 9.7,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 9.7,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 20,
+        "to": 24,
+        "kind": "reveal",
+        "length": 6.21,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.21,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 20,
+        "to": 21,
+        "kind": "reveal",
+        "length": 8.79,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 8.79,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 21,
+        "to": 22,
+        "kind": "reveal",
+        "length": 8.79,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 8.79,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 21,
+        "to": 24,
+        "kind": "reveal",
+        "length": 2.93,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.93,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 22,
+        "to": 24,
+        "kind": "coplanar",
+        "length": 5.86,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 5.86,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 25,
+        "to": 27,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 25,
+        "to": 28,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 25,
+        "to": 24,
+        "kind": "reveal",
+        "length": 10.61,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 10.61,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 27,
+        "to": 28,
+        "kind": "reveal",
+        "length": 10.61,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 10.61,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 27,
+        "to": 43,
+        "kind": "reveal",
+        "length": 7.08,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.08,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 27,
+        "to": 62,
+        "kind": "reveal",
+        "length": 0.42,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 0.42,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 28,
+        "to": 24,
+        "kind": "reveal",
+        "length": 10.61,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 10.61,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 28,
+        "to": 62,
+        "kind": "coplanar",
+        "length": 3.96,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 3.96,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 28,
+        "to": 63,
+        "kind": "reveal",
+        "length": 3.54,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 3.54,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 24,
+        "to": 63,
+        "kind": "reveal",
+        "length": 0.84,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 0.84,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 24,
+        "to": 59,
+        "kind": "coplanar",
+        "length": 14.16,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 14.16,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 38,
+        "to": 39,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 38,
+        "to": 46,
+        "kind": "reveal",
+        "length": 6.18,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.18,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 39,
+        "to": 41,
+        "kind": "reveal",
+        "length": 3.75,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 3.75,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 39,
+        "to": 42,
+        "kind": "coplanar",
+        "length": 3.75,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 3.75,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 39,
+        "to": 46,
+        "kind": "reveal",
+        "length": 6.18,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.18,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 41,
+        "to": 42,
+        "kind": "reveal",
+        "length": 6.18,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.18,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 41,
+        "to": 43,
+        "kind": "reveal",
+        "length": 2.5,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.5,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 41,
+        "to": 44,
+        "kind": "reveal",
+        "length": 1.25,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 1.25,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 42,
+        "to": 44,
+        "kind": "reveal",
+        "length": 1.25,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 1.25,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 42,
+        "to": 45,
+        "kind": "reveal",
+        "length": 2.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 42,
+        "to": 46,
+        "kind": "reveal",
+        "length": 6.18,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.18,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 43,
+        "to": 44,
+        "kind": "reveal",
+        "length": 18.54,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 18.54,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 43,
+        "to": 62,
+        "kind": "coplanar",
+        "length": 2.5,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 2.5,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 44,
+        "to": 45,
+        "kind": "coplanar",
+        "length": 18.54,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 18.54,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 44,
+        "to": 62,
+        "kind": "reveal",
+        "length": 2.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 45,
+        "to": 48,
+        "kind": "reveal",
+        "length": 12.37,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 12.37,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 45,
+        "to": 49,
+        "kind": "reveal",
+        "length": 6.17,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.17,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 45,
+        "to": 62,
+        "kind": "reveal",
+        "length": 2.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 46,
+        "to": 48,
+        "kind": "coplanar",
+        "length": 7.5,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 7.5,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 46,
+        "to": 54,
+        "kind": "reveal",
+        "length": 13.9,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 13.9,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 46,
+        "to": 53,
+        "kind": "reveal",
+        "length": 4.63,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.63,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 48,
+        "to": 56,
+        "kind": "coplanar",
+        "length": 5.43,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 5.43,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 48,
+        "to": 57,
+        "kind": "reveal",
+        "length": 6.93,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.93,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 48,
+        "to": 49,
+        "kind": "coplanar",
+        "length": 7.5,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 7.5,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 49,
+        "to": 66,
+        "kind": "reveal",
+        "length": 5.63,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 5.63,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 49,
+        "to": 57,
+        "kind": "reveal",
+        "length": 6.17,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 6.17,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 49,
+        "to": 68,
+        "kind": "reveal",
+        "length": 1.88,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 1.88,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 54,
+        "to": 53,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 54,
+        "to": 55,
+        "kind": "reveal",
+        "length": 13.9,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 13.9,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 55,
+        "to": 53,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 53,
+        "to": 56,
+        "kind": "reveal",
+        "length": 15,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 15,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 56,
+        "to": 57,
+        "kind": "reveal",
+        "length": 15,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 15,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 57,
+        "to": 68,
+        "kind": "reveal",
+        "length": 3.75,
+        "dz": 12.8,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 3.75,
+          "z_step_m": 12.8
+        }
+      },
+      {
+        "from": 57,
+        "to": 71,
+        "kind": "reveal",
+        "length": 8.44,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 8.44,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 57,
+        "to": 72,
+        "kind": "reveal",
+        "length": 2.81,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.81,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 62,
+        "to": 66,
+        "kind": "reveal",
+        "length": 4.38,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 4.38,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 62,
+        "to": 63,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 63,
+        "to": 66,
+        "kind": "coplanar",
+        "length": 4.38,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 4.38,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 63,
+        "to": 59,
+        "kind": "reveal",
+        "length": 7.5,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 7.5,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 66,
+        "to": 68,
+        "kind": "reveal",
+        "length": 2.92,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.92,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 66,
+        "to": 69,
+        "kind": "reveal",
+        "length": 2.92,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.92,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 66,
+        "to": 59,
+        "kind": "reveal",
+        "length": 5.63,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 5.63,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 66,
+        "to": 70,
+        "kind": "reveal",
+        "length": 2.92,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.92,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 68,
+        "to": 69,
+        "kind": "reveal",
+        "length": 5.63,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 5.63,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 68,
+        "to": 71,
+        "kind": "reveal",
+        "length": 2.92,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.92,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 69,
+        "to": 71,
+        "kind": "reveal",
+        "length": 2.92,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.92,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 69,
+        "to": 70,
+        "kind": "coplanar",
+        "length": 5.63,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 5.63,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 70,
+        "to": 71,
+        "kind": "reveal",
+        "length": 2.92,
+        "dz": 3.2,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.92,
+          "z_step_m": 3.2
+        }
+      },
+      {
+        "from": 70,
+        "to": 59,
+        "kind": "reveal",
+        "length": 5.63,
+        "dz": 6.4,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 5.63,
+          "z_step_m": 6.4
+        }
+      },
+      {
+        "from": 71,
+        "to": 72,
+        "kind": "coplanar",
+        "length": 8.76,
+        "dz": 0,
+        "dict": {
+          "relation": "coplanar",
+          "shared_length_m": 8.76,
+          "z_step_m": 0
+        }
+      },
+      {
+        "from": 71,
+        "to": 59,
+        "kind": "reveal",
+        "length": 8.44,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 8.44,
+          "z_step_m": 9.6
+        }
+      },
+      {
+        "from": 72,
+        "to": 59,
+        "kind": "reveal",
+        "length": 2.81,
+        "dz": 9.6,
+        "dict": {
+          "relation": "reveal",
+          "shared_length_m": 2.81,
+          "z_step_m": 9.6
+        }
+      }
+    ],
+    "stats": {
+      "c": 1,
+      "avg": "4.9",
+      "max": 9
+    }
+  }
+}
